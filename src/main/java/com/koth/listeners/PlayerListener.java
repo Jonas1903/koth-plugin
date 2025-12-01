@@ -44,7 +44,7 @@ public class PlayerListener implements Listener {
         Player player = event.getPlayer();
         
         // Check if player is teleporting out of region
-        if (plugin.getRegionManager().isPlayerInRegion(player) &&
+        if (event.getTo() != null && plugin.getRegionManager().isPlayerInRegion(player) &&
             !plugin.getRegionManager().isInRegion(event.getTo())) {
             // Reset capture if this player was capturing
             plugin.getKothManager().resetCaptureIfPlayer(player);

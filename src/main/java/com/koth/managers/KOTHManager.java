@@ -235,7 +235,7 @@ public class KOTHManager {
         
         if (capturingPlayer != null) {
             int remaining = captureTimeRequired - captureProgress;
-            float progress = (float) captureProgress / captureTimeRequired;
+            float progress = captureTimeRequired > 0 ? (float) captureProgress / captureTimeRequired : 0.0f;
             
             String timeStr = plugin.getMessageUtils().formatTime(remaining);
             

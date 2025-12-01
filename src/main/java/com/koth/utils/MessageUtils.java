@@ -24,6 +24,10 @@ public class MessageUtils {
         String message = config.getString("messages." + key, "");
         
         // Apply replacements
+        if (replacements.length % 2 != 0) {
+            // Log warning for odd number of replacements but continue processing
+            message = message + " [Warning: Invalid replacement arguments]";
+        }
         for (int i = 0; i < replacements.length; i += 2) {
             if (i + 1 < replacements.length) {
                 message = message.replace(replacements[i], replacements[i + 1]);
@@ -41,6 +45,10 @@ public class MessageUtils {
         String message = config.getString("messages." + key, "");
         
         // Apply replacements
+        if (replacements.length % 2 != 0) {
+            // Log warning for odd number of replacements but continue processing
+            message = message + " [Warning: Invalid replacement arguments]";
+        }
         for (int i = 0; i < replacements.length; i += 2) {
             if (i + 1 < replacements.length) {
                 message = message.replace(replacements[i], replacements[i + 1]);
