@@ -1,0 +1,61 @@
+# KOTH Plugin Configuration
+
+# Time between KOTH events in minutes (default: 60 minutes / 1 hour)
+koth-interval: 60
+
+# Time required to capture the KOTH in seconds (default: 60 seconds / 1 minute)
+capture-time: 60
+
+# Announcement times before KOTH starts (in minutes)
+announcement-times:
+  - 45
+  - 30
+  - 20
+  - 10
+  - 5
+  - 1
+
+# Reward configuration
+# Use %player% placeholder for player name
+# Multiple rewards can be given by separating with semicolons
+# Example: "give %player% diamond 10; give %player% emerald 5"
+reward: "give %player% diamond 10"
+
+# Region coordinates (set via /koth setpos1 and /koth setpos2)
+region:
+  world: ""
+  pos1:
+    x: 0
+    y: 0
+    z: 0
+  pos2:
+    x: 0
+    y: 0
+    z: 0
+
+# Messages (use & for color codes)
+messages:
+  prefix: "&7[&6KOTH&7]&r "
+  no-permission: "&cYou must be an operator to use this command!"
+  region-not-set: "&cKOTH region has not been set! Use /koth setpos1 and /koth setpos2"
+  pos1-set: "&aPosition 1 set at &7%x%, %y%, %z%"
+  pos2-set: "&aPosition 2 set at &7%x%, %y%, %z%"
+  reward-set: "&aReward set to: &7%reward%"
+  koth-started: "&aKOTH event has been started!"
+  koth-stopped: "&cKOTH event has been stopped!"
+  koth-already-active: "&cKOTH is already active!"
+  koth-not-active: "&cKOTH is not currently active!"
+  config-reloaded: "&aConfiguration reloaded successfully!"
+  announcement: "&6&lKOTH &7will start in &e%time%&7!"
+  koth-begin: "&6&lKOTH &7has begun! Get to the KOTH area to start capturing!"
+  player-capturing: "&e%player% &7is capturing the KOTH! &6%time%&7 remaining"
+  player-won: "&6&l%player% &7has captured the KOTH and won the reward!"
+  capture-interrupted: "&7%player%&c's capture has been interrupted!"
+  next-koth: "&7Next KOTH in &e%time%"
+  info-header: "&6&m----&r &6KOTH Info &6&m----"
+  info-status: "&7Status: %status%"
+  info-interval: "&7Interval: &e%interval% minutes"
+  info-capture-time: "&7Capture Time: &e%time% seconds"
+  info-region: "&7Region: &e%region%"
+  info-reward: "&7Reward: &e%reward%"
+  info-next: "&7Next Event: &e%next%"

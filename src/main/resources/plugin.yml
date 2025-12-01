@@ -1,0 +1,12 @@
+name: KOTHPlugin
+version: '${project.version}'
+main: com.koth.KOTHPlugin
+api-version: '1.21'
+author: Jonas1903
+description: King of the Hill plugin for Paper Minecraft
+
+commands:
+  koth:
+    description: Main KOTH command
+    usage: /koth <setpos1|setpos2|setreward|start|stop|reload|info>
+    aliases: [kingofthehill]
